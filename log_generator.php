@@ -38,14 +38,29 @@ $root_path   = '/home/decause/code/fossrit';
              '/\|little_repos\/little_repo_B\//' => '#FF0000',
              '/\|weird_repos\/weird_repo_C\//'   => 'c75d39',
 */
-$color_reg = array();
+$color_reg = array('/\|civx\//'       => 'main_green',
+                   '/\|fortune_hunter\//'       => 'main_yellow',
+                   '/\|FortuneEngine\//'       => 'lighter_yellow',
+                   '/\|blocku\//'       => 'darkest_blue',
+                   '/\|Gold-Rush-Server\//'       => 'lightest_yellow',
+                   '/\|hanginwit-threebean\//'       => 'lightest_red',
+                   '/\|hfoss\//'       => 'darkest_red',
+                   '/\|tos-rit-projects-seminar\//'       => 'main_orange',
+                   '/\|monroe-elections\//'       => 'darker_green',
+                   '/\|monroe-elections-data\//'       => 'darkest_green',
+                   '/\|Open-Video-Chat\//'       => 'darker_red',
+                   '/\|lemonade-stand\//'       => 'darker_yellow',
+                   '/\|lazorz\//'       => 'darkest_yellow',
+                   '/\|RITRemixerator\//'       => 'lightest_blue',
+                   '/\|WebBot\//'       => 'darker_blue',
+                );
 
 /* Color Library
    Just a handful of colors that look good in Gource.
 */
 $color_lib = array('default_color'   => 'F0F0F0',
 
-           'main_black'      => '454545',
+                   'main_black'      => '454545',
 
                    'main_red'        => 'F03728',
                    'lighter_red'     => 'F8685D',
