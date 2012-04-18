@@ -20,7 +20,8 @@ March 24, 2012
 /* Root path
    EXAMPLE: '/home/chris/repos';
 */
-$root_path   = '/home/chris/repos';
+
+$root_path   = '/home/decause/code/fossrit';
 
 /* Color Regexes
    Gource has some default colors it applies based on file type but
@@ -30,9 +31,9 @@ $root_path   = '/home/chris/repos';
    at any depth.
    FORMAT: {REGEX} => {COLOR}
            Where {REGEX} is your directory (from $root_path) with
-	   a leading pipe (| - prevents false positives)
-	   and {COLOR} is either a six-digit hex (e.g. '#FF0000' or 'c75d39')
-	   or a key in the pre-defined color library (e.g. 'main_green').
+       a leading pipe (| - prevents false positives)
+       and {COLOR} is either a six-digit hex (e.g. '#FF0000' or 'c75d39')
+       or a key in the pre-defined color library (e.g. 'main_green').
    EXAMPLES: '/\|big_repos\/big_repo_A\//'       => 'main_green',
              '/\|little_repos\/little_repo_B\//' => '#FF0000',
              '/\|weird_repos\/weird_repo_C\//'   => 'c75d39',
@@ -44,38 +45,38 @@ $color_reg = array();
 */
 $color_lib = array('default_color'   => 'F0F0F0',
 
-		   'main_black'      => '454545',
+           'main_black'      => '454545',
 
                    'main_red'        => 'F03728',
                    'lighter_red'     => 'F8685D',
                    'lightest_red'    => 'F88E86',
                    'darker_red'      => 'B44C43',
                    'darkest_red'     => '9C170D',
-                   
+
                    'main_orange'     => 'F08828',
                    'lighter_orange'  => 'F8A75D',
                    'lightest_orange' => 'F8BC86',
                    'darker_orange'   => 'B47943',
                    'darkest_orange'  => '9C520D',
-                   
+
                    'main_blue'       => '1B8493',
                    'lighter_blue'    => '4EBAC9',
                    'lightest_blue'   => '6FBEC9',
                    'darker_blue'     => '2B666E',
                    'darkest_blue'    => '095560',
-                   
+
                    'main_green'      => '1FB839',
                    'lighter_green'   => '52DB6A',
                    'lightest_green'  => '77DB88',
                    'darker_green'    => '348A43',
                    'darkest_green'   => '0A771D',
-                   
+
                    'main_yellow'     => 'BFE626',
                    'lighter_yellow'  => 'D4F35B',
                    'lightest_yellow' => 'DCF383',
                    'darker_yellow'   => '97AD41',
                    'darkest_yellow'  => '7A960C',
-                   
+
                    'main_purple'     => '841B93',
                    'lighter_purple'  => 'BA4EC9',
                    'lightest_purple' => 'BE6FC9',
@@ -174,12 +175,12 @@ function slurpCommits( $path = '.', $commits = array() ){
     foreach ($files as $file){
       $color = $color_lib['default_color'];
       foreach ($color_reg as $regex => $rcolor){
-	if (preg_match($regex,'|'.$file)){
-	  if (isset($color_lib[$rcolor]))
-	    $color = $color_lib[$rcolor];
-	  else if (preg_match('/^#?([a-f0-9]{6})$/i',$rcolor))
-	    $color = str_replace('#','',$rcolor);
-	}
+    if (preg_match($regex,'|'.$file)){
+      if (isset($color_lib[$rcolor]))
+        $color = $color_lib[$rcolor];
+      else if (preg_match('/^#?([a-f0-9]{6})$/i',$rcolor))
+        $color = str_replace('#','',$rcolor);
+    }
       }
       if (!$all_commits[$date]) $all_commits[$date] = '';
       $entry = $date . '|' . $author . '|' . $file . '|' . $color . "\n";
