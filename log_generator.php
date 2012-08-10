@@ -21,7 +21,7 @@ March 24, 2012
    EXAMPLE: '/home/chris/repos';
 */
 
-$root_path   = '/home/decause/code/fossrit';
+$root_path   = '/home/decause/code/multigource-fossrit/codes';
 
 /* Color Regexes
    Gource has some default colors it applies based on file type but
