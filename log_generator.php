@@ -21,7 +21,7 @@ March 24, 2012
    EXAMPLE: '/home/chris/repos';
 */
 
-$root_path   = '/home/decause/code/fossrit';
+$root_path   = '/home/gjurman/decause/multigource-fossrit/rhok';
 
 /* Color Regexes
    Gource has some default colors it applies based on file type but
@@ -169,10 +169,10 @@ function slurpCommits( $path = '.', $commits = array() ){
 
       // Append files
       if ( (substr($line,0,2) == "M\t") || (substr($line,0,2) == "A\t") || (substr($line,0,2) == "D\t") ){
-        foreach ($ignore as $regex){  if (preg_match($regex,$line)) continue(2);  }
+        if (@$ignore !== null) foreach ($ignore as $regex){  if (preg_match($regex,$line)) continue(2);  }
         $files[] = substr($line,0,1) . '|' . substr($path,strlen($root_path)+1) . '/' . substr($line,2);
       }
-
+    
       // Extract author
       else if (substr($line,0,8) == "Author: ") {
         $line_exp = explode(' ',$line);
@@ -197,7 +197,7 @@ function slurpCommits( $path = '.', $commits = array() ){
         $color = str_replace('#','',$rcolor);
     }
       }
-      if (!$all_commits[$date]) $all_commits[$date] = '';
+      if (!in_array($date, $all_commits)) $all_commits[$date] = '';
       $entry = $date . '|' . $author . '|' . $file . '|' . $color . "\n";
       $all_commits[$date] .= $entry;
     }
