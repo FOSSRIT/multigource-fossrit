@@ -152,7 +152,7 @@ def slurp_commits(path, commits, all_commits):
                 #if filter(labmda x: re.match(x, line) is not None, ignore):
                 #    continue
                 files.append(''.join([line[:1], '|',
-                             path[len(root_path) + 1:],
+                             os.path.split(path)[1],
                              '/', line[2:]]))
 
             # Extract author
