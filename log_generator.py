@@ -12,6 +12,7 @@
 #March 24, 2012
 #
 #*****************************************************
+from __future__ import unicode_literals
 
 import time
 import os
@@ -123,6 +124,10 @@ def main():
 
     all_commits = sorted(all_commits.values())
     scalar_log = ''.join(all_commits)
+    try:
+        scalar_log = scalar_log.encode('utf8')
+    except UnicodeEncodeError:
+        scalar_log = scalar_log.encode('windows-1252')
     print(scalar_log)
 
 
