@@ -109,6 +109,8 @@ color_lib = {
 #**********************
 # EXECUTABLE CODE
 #**********************
+
+
 def main():
     all_commits = dict()
 
@@ -134,6 +136,8 @@ def main():
 #*************************
 #  FUNCTIONS
 #*************************
+
+
 def slurp_commits(path, commits, all_commits):
     for commit in commits:
         commit = commit.split("\n")
