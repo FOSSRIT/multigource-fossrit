@@ -1,0 +1,21 @@
+Get:
+    git clone all the repos into one directory
+
+Configure:
+    edit log_generator.py to include path to repos
+
+Generate Log:
+    python log_generator.py > libre3.log
+
+Colorize Log:
+    python colorize.py > libre3-color.log
+
+Sanitize Log:
+    not automated yet, check for blank lines and parse errors. Usually at the
+    very top and very bottom of file, not in the middle.
+
+Watch:
+    time gource --load-config libre.conf -f -1280x720 libre3-color.log
+
+Render:
+   time gource --load-config libre.conf -f -1280x720 libre-color.log --output-ppm-stream - | ffmpeg     -y -b:v 3000K -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 libreplanet.mp4 
