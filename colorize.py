@@ -2,16 +2,19 @@ import math
 
 
 projects = set()
-with open('rhok.log') as f:
+with open('libre.log') as f:
     for line in f:
         split = line.strip().split('|')
-        projects.add(split[3].split('/')[0])
+        try:
+            projects.add(split[3].split('/')[0])
+        except:
+            print line
 
-    colors = ['F0F0F0', '454545', 'F03728', 'F8685D', 'F88E86', 'B44C43',
+    colors = ['52DB6A', '77DB88', '348A43', '0A771D', 'BFE626', 'D4F35B',
+              'F0F0F0', '454545', 'F03728', 'F8685D', 'F88E86', 'B44C43',
+              'DCF383', '97AD41', '7A960C', '841B93', 'BA4EC9', 'BE6FC9',
               '9C170D', 'F08828', 'F8A75D', 'F8BC86', 'B47943', '9C520D',
               '1B8493', '4EBAC9', '6FBEC9', '2B666E', '095560', '1FB839',
-              '52DB6A', '77DB88', '348A43', '0A771D', 'BFE626', 'D4F35B',
-              'DCF383', '97AD41', '7A960C', '841B93', 'BA4EC9', 'BE6FC9',
               '662B6E', '550960',]
 
 
@@ -19,10 +22,14 @@ with open('rhok.log') as f:
     colors = colors * n_wraps
     color_lookup = dict(zip(projects, colors))
 
-with open('rhok.log') as f:
+with open('libre.log') as f:
     for line in f:
         split = line.strip().split('|')
-        project = split[3].split('/')[0]
+        try:
+            project = split[3].split('/')[0]
+        except:
+            print project
+
         split[-1] = color_lookup[project]
         print '|'.join(split)
 
