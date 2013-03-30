@@ -1,0 +1,246 @@
+We've been at this for a long time. Now we're facing even harder challenges and
+threats than in the past. For a long time, pc arch was stable, and for a long
+time, ms-dos made it so much couldn't change. When it got perverted in the
+90's, still the things we couldn't handle were limited to fringes. We started
+seeing peripherals with proprietary drivers due to c-crypt.
+
+Then the BIOS suddenly became something that could be replaced. It wasn't just
+a piece of circuit we could ignore.
+We had to start developing Free BIOS' like Coreboot.
+
+Things got even worse around 10 years ago. Manufacturers started to refuse to
+tell us what we needed to know to make Coreboot run on our machines. This Had
+to do with Digital restrictions management.
+
+Then it got worse.
+
+Intel and AMD processors require micro-code blobs, so we discovered blobs. It
+might has well have been a circuit before. But then it changed to software
+installed, which we do have to care about.
+
+In the PC world, most things, the problems were at the edges.
+Now with mobile computing, disaster is spreading everywhere, like the dam
+broke.
+There is nothing comparable.
+
+What we find now, is that they are building systems on a chip, and the company
+that makes chip, doesn't have control of what is on chip, it licenses parts
+from different places.
+
+How do we pressure the company that makes the computer, to get it to pressure
+the chip producers, to pressure the company that designs the piece of that
+chip, to make it work for Freedom? Or we do reverse engineering, which is
+probably what it comes down to.
+
+I tell universities to teach reverse engineering, and have them do it for some
+important peripherals.
+
+In addition, we see the disaster, we see a lot of tyrannical devices designed
+so users can't replace them. Some android devices, some apple, and others. This
+"Tivo-ization", was the first time we noticed. Hardware stopping users from
+running Free software. This led me to realize we had to change the GPL so that
+Freedom 1 was practical Freedom, and not just some fantasy.
+
+We see nasty things happening in initialization software, like M$ restricted
+boot.
+
+There is a similar problem in the RaspberryPi, and the only way to make it work
+is with a blob. It is even worse than that, it can't even boot without the
+blob. There are other such boards that don't have that problem. We need to
+inform the public about this choice.
+
+Lots of people are focused on Rpi, so I asked someone to make a list of
+products [like Rpi] that respect Freedom more.
+
+None of those things can do the job that this does. We need to have laptops and
+servers that you can run.
+The Northbridge now requires a blob... people who saw his was the case, it
+didn't occur to them that this was a disaster.
+
+Our reverse engineering task list is growing, and we don't find many people who
+want to do this work. <strong>If you want to make a tech contribution to our
+Freedom, this is where we need you most</strong>. Please learn reverse
+engineering for the specs of peripherals, and help develop Free replacements,
+so we can use circuits without being under control.
+
+I just got info about new mobile operating systems, like Firefox OS, which like
+android, uses non-Free software to talk to peripherals. It is not helping us,
+and won't enable us to get any closer to Freedom than we were without it. I'm
+afraid no such project will help us on that, they are not interested in
+addressing the hard problem of Freedom, they want success, and want to be
+popular, so they don' tackle the place where Freedom is being defeated, and
+replace the layers that we don't need to replace... they are not helping to
+reach the goal of Freedom.
+
+I've found that the Chromebook is no better than anything else, but we still
+don't know about the ARM. It looks like, we are going to have to do something,
+to bring about the existence the computer you can run with a Free operating
+system. We could use all in the past, then some, and now and in the future,
+we're going to have to build and sell computers. We're going to have to raise
+money, and get into the habit of buying computers that were designed for Free
+software, instead of the old "liberate other user's computers." It used to be
+great to say 'bring your comp in, and we'll Free it.'
+
+It is going to be a constant struggle to do that in the future.
+We can't put all of our eggs in that basket, we've got to push on the reverse
+engineering also. Once you can do it, teach others to do the same. We must do
+both efforts in parallel, and maybe one will be a success.
+
+There are some Free software developers who seem to have a hunger to get their
+software into the apple 'crap' store. It doesn't allow Free software of course,
+apple won't approve unless it is non-Free. They feel the temptation to build a
+non-Free executable to run on the 'i-things.' it is better to say 'jail break
+your ithing, and then install the Free executable.'
+
+If you are going to use an ithing, at least get out of the jail.
+
+People are being tempted to fail to uphold the cause of Freedom, just to get
+more people to run their code. I think this is a poor choice of values. 
+
+<strong><em>What is more important, Freedom or being more
+popular?</em></strong>
+
+We see people who want to have their Free program in the Apps store, but then
+they make another mistake, they think they should remove the copyleft, which
+isn't necessary, since they can make executables. They don't need to change the
+license on the source. This is still a mistake, but a smaller mistake than
+changing their license on source code to a lax permissive license.
+
+It's not just letting something through the wall, but taking the wall down
+entirely.
+
+They will still use a Free software license, but abandon their attempts to take
+away Freedom. If you must cater to the crap store, you can release an
+executable without changing the license on the source-code. Better yet, release
+under GPL the executable, and jailbreak. The more things that require
+jailbreaks, the more incentive to install, and the bigger the fight will be
+against what Apple is doing. Remember the App store is really censorship,
+carried out for apple's biz interests. For society to make App store
+publication the standard, this is endorsing one company to make censorship a
+standard.
+
+To convince people to stop using copyleft is the most ironic horrible thing you
+can do in this area. I'll likely publish an article with more info later.
+
+
+There recently started a campaign to amend the DMCA to permit unlocking any
+device. The campaign is called 'fix the DMCA', we have to take issue with this
+because it is not enough to <em>fix</em> it. The anti-circumvention provisions
+must be abolished. The digital handcuffs are nasty, and there should be no
+restriction on devices or using them to break handcuffs. That is not even
+enough. DRM should be illegal.
+
+*applause*
+
+Yes, that proposed change would be a step forward, but if we are going to
+endorse it, we have to be careful to repeat "this is not enough, just part of
+it". There is momentum in a campaign, and the people saying "help us" and you
+say "I should boost the campaign, and take the small change" instead of keeping
+pressure for the big change. Every time we say we're in favor, we need to say
+"but... we need more!"
+
+Now, I should mention a bit more about portable phones. Nowadays, there will be
+2 computers [in a portable phone], a signal processor, where the program runs
+to handle radio communication with phone network, and the main computer to do
+most other things. If the software that controls the signal processor were
+fixed, we could consider it part of the circuitry, and ignore it. But it can be
+changed, without user's consent, remotely, back-door through phone network.
+That software can take control of the other machine, like sharing access to all
+the memory. The phone network can say 'overwrite the software in the main
+computer' You can install Replicant, but that doesn't give you control over
+your computing you can trust, it can be replaced anytime with something
+malicious.
+
+We need to get a phone design such that the signal processor cannot control the
+main computer. This was the case with OpenMoko. The signal processor couldn't
+do anything to the main computer.
+
+Or we need software in the signal processor. There is for one job, the voice
+protocol, GSM. There is a different protocol for data, which means starting
+completely from scratch. Now if we had a completely Free software cell phone,
+or one where the signal processor didn't have a chance to be malicious, would
+that make it a good thing to use? There is no way for the phone to talk with
+the phone network, without networks knowing where the phone is. 
+
+<strong>This is Stalin's dream, and I won't own one.</strong>
+
+If you had a parabolic antenna, then maybe you could point that at one
+particular tower, and maybe that would be the only tower that would get signal
+from you. Then you couldn't be triangulated. I don't know if this works in
+practice. There is no perfect directional antenna. Size makes a practical
+difference too. *laughter*  it would be interesting to have someone try this
+out, someone who knows about antennas, and give it a try, or calculate what
+would happen.
+
+There are services that you can ask to tell you where you are. You can use this
+to find out if you can make a difference in practice. They'd still know you're
+in a particular city, but that is a lot less than knowing what block you are
+on.
+
+Now it is time for the awards. First the award for contribution to Free
+software. This goes to a project, which is an interactive programming
+environment in Python, called IPython, to Fernando Perez. I want to say one
+thing: if you write a substantial program in python, app or package, please
+release under the GPL. It is extremely important to do this.
+
+FP
+    Thank you everyone, I'll be breif. I want to thank the FSF for the work you
+    all have done to enable the stuff we do today, despite the threats we face
+    today. When I worked on IPython, it wasn't clear it would be valuable, but
+    that it would be a blackhole for time. *laughter* Those close to us, like
+    my wife, pay the highest price, so I want to thank her for that. It is the
+    project of a community, Brian Granger(sp), and Berkeley contributer [name
+    lost].
+
+    People in the scientific python community, I spend time with scientists who
+    are interested in software, Eric Jones helped in the beginning, and I want
+    to thank him. Also thank you GVR, who created python. And finally UC
+    Berkeley, who allows me to do work that straddles academic science.
+
+    We have some support form the Sloan foundation now thankfully. IPython
+    started it's life as a shell, and has grown into a tool. It is not just a
+    scientific project, code is everywhere, and this is about interaction.
+    IPython is language agnostic by-and-large, but we want to appeal to other
+    languages soon.
+
+
+    This award is dedicated to author of Matplotlib author, John Hunter. He was
+    like a brother, and we worked for 10 years together. This is for him.
+    *applause*
+
+RMS
+
+The award for using Free software, or the spirit of Free software to make a
+better world, the social world, is OpenMRS.
+*applause*
+
+OpenMRS
+
+    Thank you for this very important reward, nd recognition that have made MRS
+    a success. Big thanks to RMS, the committee, and FSF.
+
+    MRS came together to solve a problem in healthcare for developing
+    countries, providing access to health info, and make access and key issue.
+    It was key to the project, people needed access to data, supply management,
+    and X-rays. Free software was part of it from the beginning. The best way
+    to empower people, particularly in developing countries, for their needs,
+    is to use Free Software. We trained 30 programmers in Rwanda, and they can
+    now implement themselves and have made a hospital using the software. For
+    nearly a decade we've been doing this. Thank you Bill Tierney, and many
+    other colleagues. Ben Wilk, key devs. Many of the programmers in Uganda,
+    and around the world. Rockefeller foundation, and others.
+
+    US CDC, and the WHO. We've had strategic partners in Rwanda, and Kenya, and
+    Haiti. I'd like to thank the FSF, I had an office next to Richard in the
+    90's.
+
+    Free Software has 50 countries using our system.
+
+
+RMS
+I made the suggestion that if they changed the name to LibreMRS, they'd do
+better.
+
+Libby
+I want to thank everyone for being here, we start at 9am, and breffest at 8:15.
+We'll see you in the morning.
